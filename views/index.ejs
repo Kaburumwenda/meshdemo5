@@ -1,0 +1,99 @@
+<%- include('_layouts/header') -%>
+
+
+
+    <div class="container" id="home_back">
+        <div class="text-slider">
+            <p>welcome to MeshMall.</p>
+            <p>select a category to view products</p>
+            
+           </div>
+        
+            <div id="show-case">
+
+                <div class="imgslider imgsl">
+                    <a href="/products/all-products"><img class="img-resp" src="https://i.postimg.cc/VLzRX7Pc/03.jpg"></a>
+                    <a class="img-others" href="#">Quick Delivery</a>
+                    <a class="img-others" href="#">Quick Delivery</a>
+                </div>
+
+                <div class="imgslider imgsl">
+                    <a href="/products/all-products"><img class="img-resp" src="https://i.postimg.cc/HsmX8371/images.jpg"></a>
+                    <a class="img-others" href="#">Quick Delivery</a>
+                </div>
+
+                <div class="imgslider imgsl">
+                    <a href="/products/all-products"><img class="img-resp" src="https://i.postimg.cc/NFkyxqrq/P30-Pro-orange.png"></a>
+                    <a class="img-others" href="#">Quick Delivery</a>
+                </div>
+
+                <div class="imgslider imgsl">
+                    <a href="/products/all-products"><img class="img-resp" src="https://i.postimg.cc/YSLhsmmx/ima2ges.jpg"></a>
+                    <a class="img-others" href="#">Quick Delivery</a>
+                </div>
+
+                <div class="imgslider imgsl">
+                    <a href="/products/all-products"><img class="img-resp" src="https://i.postimg.cc/ZnhC20kF/Huawei-P30-Pro-black-lrg1-en.png"></a>
+                    <a class="img-others" href="#">Quick Delivery</a>
+                </div>
+
+                <div class="imgslider imgsl">
+                    <a href="/products/all-products"><img class="img-resp" src="https://i.postimg.cc/MTJ6K4sz/p30-pro-blue.png"></a>
+                    <a class="img-others" href="#">Quick Delivery</a>
+                </div>
+                
+            </div>
+            
+
+            <!--SECOND SECTION BEGIN-->
+        <div class="slider2">
+           
+            <div>
+                <a href="/products/all-products"><span id="shop_now">SHOP NOW <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                </span></a>
+            </div>
+            <div id="advertmore">
+                <p class="advert"> <i class="fa fa-taxi" aria-hidden="true" id="icons_home"></i>
+                    Up To 50% Off
+                </p>
+
+                <p class="advert"> <i class="fa fa-heart" aria-hidden="true" id="icons_home"></i>
+                    Genuine products</p>
+
+                <p class="advert"><i class="fa fa-taxi" aria-hidden="true" id="icons_home"></i> 
+                    Quick Delivery <span class="spanr">=></span> 4hrs to 48hrs</p>
+
+                <p class="advert"> <i class="fa fa-car" aria-hidden="true" id="icons_home"></i>
+                    Free Delivery</p>
+            </div>
+            <div>MeshMall</div>
+     </div>
+     <br>
+     <br>
+     <hr>
+        </div>
+        
+        
+        
+        <script>
+        $(document).ready(function()
+        {
+            $('.imgslider:gt(0)').hide();
+            setInterval(function() {
+                $(".imgslider:first-child").fadeOut(3000).next(".imgslider").fadeIn(3000).end().appendTo("#show-case")
+        }, 4000);
+        
+
+        $('.advert:gt(0)').hide();
+            setInterval(function() {
+                $(".advert:first-child").fadeOut(100).next(".advert").fadeIn(3000).end().appendTo("#advertmore")
+        }, 3000);
+        
+        });
+        </script>
+        </body>
+        </html>
+
+<%- include('_layouts/footer') -%>
+
+<!--<%- content %>-->
