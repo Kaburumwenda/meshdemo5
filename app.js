@@ -9,10 +9,12 @@ var expressValidator = require('express-validator');
 var fileUpload = require('express-fileupload');
 var passport = require('passport');
 const config = require('./config/database');
+const cool = require('cool-ascii-faces')
 
 
 app.use(express.json());
 app.use('/user', userCon);
+app.get('/cool', (req, res) => res.send(cool()))
 
 // View engine setup
 app.set('views', path.join(__dirname, 'views'));

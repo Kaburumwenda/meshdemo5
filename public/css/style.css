@@ -64,17 +64,6 @@ table.alignmiddle td {
 /* mine 
 */
 
-.header-nav{
-    color: black !important;
-    background-color: #044949 !important;
-    
-    
-}
-.header-list{
-    color: black !important;
-}
-
-
 /*discount */
 
 .discount{
@@ -228,6 +217,13 @@ Home Page slider
       height: 100px;
       font-weight: bold;
       border-radius: 10px;
+  }
+  @media (max-width: 760px){
+      .slider2{
+          display: none !important;
+          
+      }
+      
   }
 
   #shop_now{
