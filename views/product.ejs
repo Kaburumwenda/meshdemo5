@@ -12,8 +12,9 @@
     </div>
     <div class="col-xs-12 col-md-7">
         <p><%= p.desc %></p>
-        <p class="discount"style="font-weight: bold; font-family: 'Oswald';">Discout of Ksh <%= p.discount %></p>
-        <h3>Ksh<%= parseFloat(p.price).toFixed(2) %></h3>
+        
+        <h3>Ksh <%= parseFloat(p.price).toFixed(2) %></h3>
+        <p class="discoun"style="font-weight: bold; font-family: 'Oswald'; color:'orange'">Save Ksh: <%= p.discount %></p>
         <h5 style="font-family: 'Roboto Slab';"><strike class="strike">Ksh <%= parseFloat(p.price_off).toFixed(2) %></Ksh></strike></h5>
         <% if (loggedIn) { %>
         <p><a href="/cart/add/<%= p.slug %>"><button class="btn btn-block btn-success"> <i class="fa fa-cart-plus" aria-hidden="true"></i>

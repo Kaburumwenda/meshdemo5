@@ -1,8 +1,11 @@
 #home_back{
     background-color: #f2f2f2 !important;
 }
+body{
+    background-color: #f2f2f2;
+}
 img.pimage {
-    width: 150px;
+    width: 130px;
 }
 
 a.pa {
@@ -260,4 +263,3 @@ Home Page slider
   .spanr{
       color: red;
   }
-  
