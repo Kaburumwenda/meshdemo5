@@ -1,0 +1,62 @@
+.second-form input {
+    border-radius: 4px;
+    width: 100px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    
+    font-size: 16px;
+    background-color: white;
+    background-image: url('https://i.postimg.cc/gjDmCnqx/search-512.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  
+  input[type=text]:focus {
+    width: 50%;
+  }
+  .first-form input{
+    height: 30px;
+    border: 0.2px solid wheat;
+    margin-top: 10px;
+    width: 130px;
+    color: white;
+    border-radius: 10px;
+    background-color: #262626;
+}
+
+.contaner_two{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+}
+.credetials{
+    display: flex;
+    flex-direction: row;
+    
+}
+.credetials01{
+    display: flex;
+    flex-direction: column;
+}
+
+@media(max-width: 600px){
+    input[type=text]:focus{
+        width: 95%;
+    }
+    .second_input{
+        display: none;
+    }
+}
+@media (min-width: 700px){
+.first-form input{
+    display: none;
+}
+.credetials{
+    display: none;
+}
+}

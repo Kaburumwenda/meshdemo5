@@ -6,11 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title><%= title %></title>
+        <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" />
         <link rel="stylesheet" href="/css/style.css" />
         <link rel="stylesheet" href="/css/categories.css" />
+        <link rel="stylesheet" href="/css/index.css" />
+        <link rel="stylesheet" href="/css/search.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     </head>
 
@@ -31,6 +34,11 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="/">MeshMall</a>
+
+                    <form action="products/all-products" class="first-form">
+                        <input type="text" name="search" placeholder="Search..">
+                      </form>
+
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
@@ -66,8 +74,27 @@
                 </div><!--/.nav-collapse -->
             </div>
         </nav>
-
+        
         <div class="container">
+            <!--CONTAINER TWO-->
+            <div class="contaner_two">  
+                <div class="second_input">
+                    <form class="second-form">
+                        <input type="text" name="search" placeholder="Search..">
+                      </form>
+                </div>
+                <div class="credetials">
+                    <div class="credetials01">
+                        <a href="/users/register">
+                            <i class="fa fa-registered" aria-hidden="true"></i>
+                             Register</a>
+                    </div>
+                        <div class="credetials02">
+                            <a href="/users/login"><i class="fa fa-sign" aria-hidden="true"></i>
+                                Log in</a>
+                        </div>
+                </div>
+            </div>
             <%- messages('messages', locals) %>
             
             <% if (errors) {%>

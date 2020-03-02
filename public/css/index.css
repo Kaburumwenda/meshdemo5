@@ -1,0 +1,123 @@
+/* TEXT SLIDER 
+*/
+.text-slider2{
+    background-color: #eff5f5;
+    color: black;
+    font-family: 'Monoton';
+    font-weight: bolder;
+    height: 20px;
+    width: 100%;
+}
+.text-slider p{
+    animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 50%; 
+      opacity: 5;
+    }
+    75% {
+        font-size: 20px;
+        margin-left: 25%;
+        width: 50%;
+      }
+  
+    to {
+      margin-left: 0%;
+      width: 50%;
+    }
+    
+      
+  }
+
+  /*BUTTON NAV1 
+  */
+.button-nav1{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.button-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.icon1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: turquoise;
+    font-size: 20px;
+    width: 50px;
+    border-radius: 50%;
+    height: 50px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.icon2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #6fdc6f;
+    font-size: 20px;
+    width: 50px;
+    border-radius: 50%;
+    height: 50px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.icon3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #660029;
+    font-size: 20px;
+    width: 50px;
+    border-radius: 50%;
+    height: 50px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.icon4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #003333;
+    font-size: 20px;
+    width: 50px;
+    border-radius: 50%;
+    height: 50px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.button-items a{
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-weight: bolder;
+}
+.button-items a:hover{
+    color: violet;
+}
+
+@media(max-width: 650px){
+    .button-nav1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    justify-content: space-between;
+    }
+}
