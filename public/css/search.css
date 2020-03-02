@@ -15,7 +15,7 @@
   }
   
   
-  input[type=text]:focus {
+  .first-form input:focus {
     width: 50%;
   }
   .first-form input{
@@ -40,7 +40,23 @@
     justify-content: right;
     
 }
+.search_home{
+    
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    
 
+}
+.search_home input{
+    width: 450px;
+    border: transparent;
+}
+.form2{
+    display: flex;
+    
+
+}
 
 @media(max-width: 600px){
     input[type=text]:focus{
@@ -50,7 +66,7 @@
         display: none;
     }
 }
-@media (min-width: 700px){
+@media (min-width: 600px){
 .first-form input{
     display: none;
 }
@@ -58,3 +74,8 @@
     display: none;
 }
 }
+
+
+
+/* LOAD MORE
+ */
