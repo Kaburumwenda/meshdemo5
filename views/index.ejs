@@ -1,101 +1,81 @@
 <%- include('_layouts/header') -%>
+<!--
+<div>
+    <ul class="gallery-slideshow">
+        
+              <li><img src="https://i.postimg.cc/htz5FJ9B/8.jpg"/></li>
+        
+              <li><img src="https://i.postimg.cc/PfS3PbyH/3.jpg"/></li>
+        
+              <li><img src="https://i.postimg.cc/vBQhmD6D/10.jpg"/></li>
+        
+              <li><img src="https://i.postimg.cc/sfHmVjfD/7.jpg"/></li>
+        
+              <li><img src="https://i.postimg.cc/mD23sq0H/6.jpg"/></li>
+        
+              <li><img src="https://i.postimg.cc/y8m0SsKR/4.jpg"/></li>
+        
+            </ul>
+</div>
+-->
+<div class="row products" id="cat-pro">
+    
+    <% products.forEach(function(p){ %>
+           <div class="col-10 col-xs-6  col-md-4 col-lg-3 my-3">
+               <div class="card">
 
 
+                   <div class="img-container">
+                    <p class="dis"style="font-weight: bold; font-family: 'Oswald';">Discout: Ksh<%= p.discount %></p>
+                   <a class="pa"  href="/products/<%= p.category %>/<%= p.slug %>">
+                        <img class="card-img-top img-responsive"src="/product_images/<%= p.id %>/<%= p.image %>" alt="">
+                    </a>
+                   </div>
 
-    <div class="container" id="home_back">
-        <div id="welcome" class="text-slider2">
-            <p class="welcome-text">welcome to MeshMall.</p>
-            <p class="welcome-text">www.meshmall.co.ke</p>
-            
-            
+
+                   <div class="card-footer d-flex justify-content-between">
+                    <h6 style="font-weight: bold; font-family: 'Oswald';"><%= p.title %></h6>
+                   </div>
+                   
+
+                   <div>
+                        <h4 style="font-family: 'Roboto Slab';">Ksh <%= parseFloat(p.price).toFixed(2) %></h4>
+                        <h5 style="font-family: 'Roboto Slab';"><strike class="strike">Ksh <%= parseFloat(p.price_off).toFixed(2) %></Ksh></strike></h5>
+                    </div>
+
+
+                    <div>
+                        <a class="vd" href="/products/<%= p.category %>/<%= p.slug %>"><button class="btn btn-block Details-button">View Details</button></a>
+                    </div>
+               </div>
            </div>
-        
-            <div id="show-case">
+        <% }); %>
+    
+</div>
 
-                <div class="imgslider imgsl">
-                    <a href="/products/all-products"><img class="img-resp" src="https://i.postimg.cc/xTPzR1BT/product-7.png"></a>
-                    <a class="img-others" href="#">Quick Delivery</a>
-                    <a class="img-others" href="#">Quick Delivery</a>
-                </div>
 
-                <div class="imgslider imgsl">
-                    <a href="/products/all-products"><img class="img-resp" src="https://i.postimg.cc/CK8McvdH/product-2.png"></a>
-                    <a class="img-others" href="#">Quick Delivery</a>
-                </div>
+    <script>
+        $(function() {
 
-                <div class="imgslider imgsl">
-                    <a href="/products/all-products"><img class="img-resp" src="https://i.postimg.cc/rsfqD3Yc/product-6.png"></a>
-                    <a class="img-others" href="#">Quick Delivery</a>
-                </div>
+	  $('.gallery-slideshow').slideshow({
 
-                <div class="imgslider imgsl">
-                    <a href="/products/all-products"><img class="img-resp" src="https://i.postimg.cc/tJ4jGDRc/product-4.png"></a>
-                    <a class="img-others" href="#">Quick Delivery</a>
-                </div>
+	    // default: 2000
 
-                <div class="imgslider imgsl">
-                    <a href="/products/all-products"><img class="img-resp" src="https://i.postimg.cc/ZnhC20kF/Huawei-P30-Pro-black-lrg1-en.png"></a>
-                    <a class="img-others" href="#">Quick Delivery</a>
-                </div>
+	    interval: 3000,
 
-                <div class="imgslider imgsl">
-                    <a href="/products/all-products"><img class="img-resp" src="https://i.postimg.cc/MTJ6K4sz/p30-pro-blue.png"></a>
-                    <a class="img-others" href="#">Quick Delivery</a>
-                </div>
-                
-            </div>
-            
+	    // default: 500
 
-            <!--SECOND SECTION BEGIN-->
-        <div class="button-nav1">
-           <div class="button-items">
-            <i class="fa fa-shopping-basket icon1" aria-hidden="true"></i>
-            <a href="/products/all-products">MeshMall</a>
-           </div> 
+	    width: 600,
 
-           <div class="button-items" >
-            <i class="fa fa-shopping-bag icon2" aria-hidden="true"></i>
-            <a href="/products/all-products">Shop Now</a>
-           </div> 
+	    // default: 350
 
-           <div class="button-items">
-            <i class="fa fa-percent icon3" aria-hidden="true"></i>
-            <a href="/">Up To 50% Off</a>
-           </div> 
+	    height: 400
 
-           <div class="button-items">
-            <i class="fa fa-car icon4" aria-hidden="true"></i>
-            <a href="/">4hrs to 48hrs Delivery Time</a>
-           </div> 
-           
-           
-     </div>
-     <br>
-     <br>
-     <hr>
-        </div>
-        
-        
-        
-        <script>
-        $(document).ready(function()
-        {
-            $('.imgslider:gt(0)').hide();
-            setInterval(function() {
-                $(".imgslider:first-child").fadeOut(3000).next(".imgslider").fadeIn(3000).end().appendTo("#show-case")
-        }, 4000);
-        
+	  });
 
-        $('.welcome-text:gt(0)').hide();
-            setInterval(function() {
-                $(".welcome-text:first-child").fadeOut(100).next(".welcome-text").fadeIn(3000).end().appendTo("#welcome")
-        }, 3000);
-        
-        });
-        </script>
-        </body>
-        </html>
+	});
+    </script>
 
 <%- include('_layouts/footer') -%>
 
-<!--<%- content %>-->
+

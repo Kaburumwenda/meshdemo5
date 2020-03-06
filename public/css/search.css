@@ -58,11 +58,96 @@
 
 }
 
+#header_top{
+    width: 100%;
+    height: 100px;
+    margin-top: 0px;
+    background-color:white;
+    position: fixed;
+    z-index: 1;
+}
+#header_top_nav{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+
+margin-bottom: 10px;
+}
+#header_top_nav input{
+    width: 500px;
+    border: 1px solid gray;
+    height: 40px;
+    border-radius: 5px;
+}
+.header-button{
+    border: transparent;
+    height: 40px;
+}
+.mesh_home{
+    margin-right: 70px;
+    font-size: 30px;
+   
+}
+.mesh_home a{
+    text-decoration: none;
+    font-family: 'Trade Winds', cursive;
+}
+.mesh_home a:hover{
+    color: orange;
+}
+.header_acc{
+    margin-left: 25px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.header_acc a{
+    font-size: 15px;
+    text-decoration: none;
+    font-family: 'Trade Winds', cursive;
+}
+.header_acc a:hover{
+    color: orange;
+}
+.header_cart{
+    margin-left: 20px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.header_cart a{
+    font-size: 15px;
+    text-decoration: none;
+    font-family: 'Trade Winds', cursive;
+    color: red;
+}
+#header_reg ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 70%;
+    
+
+}
+#header_reg li{
+    list-style: none;
+    margin: 5px ;
+}
+#header_reg a{
+    text-decoration: none;
+    color: black;
+}
+#header_reg a:hover{
+    color: orange;
+}
+
 @media(max-width: 600px){
     input[type=text]:focus{
         width: 95%;
     }
     .second_input{
+        display: none;
+    }
+    #header_top{
         display: none;
     }
 }

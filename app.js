@@ -27,19 +27,19 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.locals.errors = null;
 
 // Get Page Model
-var Page = require('./models/page');
+//var Page = require('./models/page');
 var Trending = require('./models/trending');
 
 
 
  //Get all pages to pass to header.ejs
-Page.find({}).sort({sorting: 1}).exec(function (err, pages) {
-    if (err) {
-        console.log(err);
-   } else {
-        app.locals.pages = pages;
-    }
-});
+//Page.find({}).sort({sorting: 1}).exec(function (err, pages) {
+//    if (err) {
+//        console.log(err);
+//   } else {
+//        app.locals.pages = pages;
+//    }
+//});
 
 // Get Category Model
 var Category = require('./models/category');
@@ -131,7 +131,7 @@ app.get('*', function(req,res,next) {
 
 //ROUTES
 var pages = require('./routes/pages.js');
-var adminPages = require('./routes/admin_pages.js');
+//var adminPages = require('./routes/admin_pages.js');
 var adminCategories = require('./routes/admin_categories.js');
 var adminProducts = require('./routes/admin_products.js');
 var Products = require('./routes/products.js');
@@ -141,7 +141,7 @@ var Trending = require('./routes/admin_trending.js');
 var Trendingadverts = require('./routes/trending.js');
 
 app.use('/',pages);
-app.use('/admin/pages',adminPages);
+//app.use('/admin/pages',adminPages);
 app.use('/admin/categories',adminCategories);
 app.use('/admin/products',adminProducts);
 app.use('/products',Products);
