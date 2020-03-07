@@ -1,79 +1,116 @@
 <%- include('_layouts/header') -%>
-<!--
-<div>
-    <ul class="gallery-slideshow">
+
+<div id="container_one">
+    <!--CATEGORIES CONTAINER-->
+    <div>
         
-              <li><img src="https://i.postimg.cc/htz5FJ9B/8.jpg"/></li>
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="/products/all-products">MeshMall</a></li>
+                        <% categories.forEach(function(c){ %>
+                            <li class="list-group-item"><a href="/products/<%= c.slug %>"><%= c.title %></a></li>
+                        <% }); %>
+                    </ul>
+    </div>
+    <!--Slider ADVERTS-->
+    <div id="show-case">
+        <div class="imgslider1"><a href="#"><img class="img-responsive" src="https://i.postimg.cc/htz5FJ9B/8.jpg"/></a></div>
         
-              <li><img src="https://i.postimg.cc/PfS3PbyH/3.jpg"/></li>
-        
-              <li><img src="https://i.postimg.cc/vBQhmD6D/10.jpg"/></li>
-        
-              <li><img src="https://i.postimg.cc/sfHmVjfD/7.jpg"/></li>
-        
-              <li><img src="https://i.postimg.cc/mD23sq0H/6.jpg"/></li>
-        
-              <li><img src="https://i.postimg.cc/y8m0SsKR/4.jpg"/></li>
-        
-            </ul>
+        <div class="imgslider1"><a href="#"><img class="img-responsive" src="https://i.postimg.cc/PfS3PbyH/3.jpg"/></a></div>
+  
+        <div class="imgslider1"><a href="#"><img class="img-responsive" src="https://i.postimg.cc/vBQhmD6D/10.jpg"/></a></div>
+  
+        <div class="imgslider1"><a href="#"><img class="img-responsive" src="https://i.postimg.cc/sfHmVjfD/7.jpg"/></a></div>
+  
+        <div class="imgslider1"><a href="#"><img class="img-responsive" src="https://i.postimg.cc/mD23sq0H/6.jpg"/></a></div>
+  
+        <div class="imgslider1"><a href="#"><img class="img-responsive" src="https://i.postimg.cc/y8m0SsKR/4.jpg"/></a></div>
+    </div>
+    <!--HOME PAGE LINKS ON MENU-->
+    <div id="links-1st">
+        <div><a href="#"> <i class="fa fa-car" aria-hidden="true"></i> Quality Delivery</a></div>
+        <div><a href="#"> <i class="fa fa-first-order" aria-hidden="true"></i> Quality Products</a></div>
+        <div><a href="#"> <i class="fa fa-exchange" aria-hidden="true"></i> Easy Return</a></div>
+    </div>
 </div>
--->
-<div class="row products" id="cat-pro">
+
+<!--SECOND CONTAINER-->
+<div id="index-sec">
+    <div class="index-icons2">
+        <p class="index2-p"><a href="#"><i class="fa fa-shopping-bag index2-icon" aria-hidden="true"></i></a></p>
+        <p><a href="#">MeshMall</a></p>
+    </div>
+
+    <div class="index-icons2">
+        <p class="index2-p1"><a href="#"><i class="fa fa-car index2-icon" aria-hidden="true"></i></a></p>
+        <p><a href="#">Free Delivery</a></p>
+    </div>
+
+    <div class="index-icons2">
+        <p class="index2-p2"><a href="#"><i class="fa fa-percent index2-icon" aria-hidden="true"></i>        </a></p>
+        <p><a href="#">Offers</a></p>
+    </div>
+
+    <div class="index-icons2">
+        <p class="index2-p3"><a href="#"><i class="fa fa-building index2-icon" aria-hidden="true"></i> </a></p>
+        <p><a href="#">Mombasa</a></p>
+    </div>
+</div>
+
+
+<!--CONTAINER THREE FEATURED PRODUCTS-->
+
     
-    <% products.forEach(function(p){ %>
-           <div class="col-10 col-xs-6  col-md-4 col-lg-3 my-3">
-               <div class="card">
-
-
-                   <div class="img-container">
-                    <p class="dis"style="font-weight: bold; font-family: 'Oswald';">Discout: Ksh<%= p.discount %></p>
-                   <a class="pa"  href="/products/<%= p.category %>/<%= p.slug %>">
-                        <img class="card-img-top img-responsive"src="/product_images/<%= p.id %>/<%= p.image %>" alt="">
-                    </a>
-                   </div>
-
-
-                   <div class="card-footer d-flex justify-content-between">
-                    <h6 style="font-weight: bold; font-family: 'Oswald';"><%= p.title %></h6>
-                   </div>
-                   
-
-                   <div>
-                        <h4 style="font-family: 'Roboto Slab';">Ksh <%= parseFloat(p.price).toFixed(2) %></h4>
-                        <h5 style="font-family: 'Roboto Slab';"><strike class="strike">Ksh <%= parseFloat(p.price_off).toFixed(2) %></Ksh></strike></h5>
+    <div class="featured-prod">
+        <div class="featured_text">Featured Products</div>
+        <div id="spacer"></div>
+        <div id="featured_a"><a  href="/products/all-products">See all <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></div>
+    </div>
+    <div class="container_index">
+        <% products.forEach(function(p){ %>
+            
+                <div class="card">
+ 
+ 
+                    <div class="img-container">
+                     <p class="dis"style="font-weight: bold; font-family: 'Oswald';">Discout: Ksh<%= p.discount %></p>
+                    <a class="pa"  href="/products/<%= p.category %>/<%= p.slug %>">
+                         <img class="card-img-top img-responsive"src="/product_images/<%= p.id %>/<%= p.image %>" alt="">
+                     </a>
                     </div>
-
-
+ 
+ 
+                    <div class="card-footer d-flex justify-content-between">
+                     <h6 style="font-weight: bold; font-family: 'Oswald';"><%= p.title %></h6>
+                    </div>
+                    
+ 
                     <div>
-                        <a class="vd" href="/products/<%= p.category %>/<%= p.slug %>"><button class="btn btn-block Details-button">View Details</button></a>
+                         <h4 style="font-family: 'Roboto Slab';">Ksh <%= parseFloat(p.price).toFixed(2) %></h4>
+                         <h5 style="font-family: 'Roboto Slab';"><strike class="strike">Ksh <%= parseFloat(p.price_off).toFixed(2) %></Ksh></strike></h5>
                     </div>
-               </div>
-           </div>
-        <% }); %>
-    
-</div>
-
+                </div>
+            
+         <% }); %>
+     
+    </div>
+  
+  
 
     <script>
-        $(function() {
+         $(document).ready(function()
+        {
+            $('.imgslider1:gt(0)').hide();
+            setInterval(function() {
+                $(".imgslider1:first-child").slideUp(3000).next(".imgslider1").slideDown(3000).end().appendTo("#show-case")
+        }, 3000);
+        
 
-	  $('.gallery-slideshow').slideshow({
-
-	    // default: 2000
-
-	    interval: 3000,
-
-	    // default: 500
-
-	    width: 600,
-
-	    // default: 350
-
-	    height: 400
-
-	  });
-
-	});
+        $('.welcome-text:gt(0)').hide();
+            setInterval(function() {
+                $(".welcome-text:first-child").fadeOut(100).next(".welcome-text").fadeIn(3000).end().appendTo("#welcome")
+        }, 3000);
+        
+        });
     </script>
 
 <%- include('_layouts/footer') -%>

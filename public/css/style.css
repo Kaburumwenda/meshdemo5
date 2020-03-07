@@ -232,3 +232,6 @@ Home Page slider
   .spanr{
       color: red;
   }
+  .container_products{
+      display: flex;
+  }

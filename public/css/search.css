@@ -158,6 +158,25 @@ margin-bottom: 10px;
 .credetials{
     display: none;
 }
+.header_nav{
+    display: none;
+}
+}
+
+@media(max-width:900px){
+.mesh_home{
+    font-size: 20px;
+}
+#header_top_nav input{
+    width: 300px;
+    border: 1px solid gray;
+    height: 30px;
+    border-radius: 5px;
+}
+.header-button{
+    border: transparent;
+    height: 30px;
+}
 }
 
 

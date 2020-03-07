@@ -5,13 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title><%= title %></title>
+        <title> <%= title %></title>
         <link href="https://fonts.googleapis.com/css?family=Trade+Winds&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" />
         <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/footer.css" />
         <link rel="stylesheet" href="/css/categories.css" />
         <link rel="stylesheet" href="/css/index.css" />
         <link rel="stylesheet" href="/css/search.css" />
@@ -65,7 +66,7 @@
             </div>
             
         </div>
-        <nav class="navbar navbar-inverse">
+        <nav class="navbar navbar-inverse" id="header_nav">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -112,27 +113,7 @@
         
         <div class="container">
             <!--CONTAINER TWO-->
-            <div class="contaner_two">  
-                <div class="second_input">
-                    <form action="#" class="form2">
-                        <div class="search_home">
-                            <input type="search" name="search" placeholder="Search products, brands and categories...">
-                            <button class="btn btn-primary" type="submit">Search</button>
-                        </div>
-                      </form>
-                </div>
-                <div class="credetials">
-                    <div class="credetials01">
-                        <a href="/users/register">
-                            <i class="fa fa-registered" aria-hidden="true"></i>
-                             Register</a>
-                    </div>
-                        <div class="credetials02">
-                            <a href="/users/login"><i class="fa fa-sign" aria-hidden="true"></i>
-                                Log in</a>
-                        </div>
-                </div>
-            </div>
+            
             <%- messages('messages', locals) %>
             
             <% if (errors) {%>
@@ -144,6 +125,7 @@
             <% }%>
     
             <div class="row">
+                <!--
                 <div class="col-xs-12 col-md-3">
                     <h3>Categories</h3>
                     <ul class="list-group">
@@ -153,6 +135,7 @@
                         <% }); %>
                     </ul>
                 </div>
+            -->
                 <div class="col-xs-12 col-md-1"></div>
                 <div class="col-xs-12 col-md-8">
                     
