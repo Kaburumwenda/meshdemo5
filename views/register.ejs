@@ -1,6 +1,7 @@
 <% include _layouts/header %>
 
-<h1><%= title %></h1>
+<div class="register">
+    <h1><%= title %></h1>
 
 <form method="post" action="/users/register">
 
@@ -29,7 +30,13 @@
         <input type="password" name="password2" class="form-control"  placeholder="Confirm Password">
     </div>
 
-    <button type="submit" class="btn btn-default">Register</button>
+    <button type="submit" class="btn btn-default btn-success">Register</button>
 </form>
+<br>
+<div>
+    <p>Already have an Account:</p>
+    <p><a href="/users/login"><button class="btn btn-default btn-info">Login</button></a></p>
+</div>
+</div>
 
 <% include _layouts/footer %>

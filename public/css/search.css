@@ -1,3 +1,17 @@
+/* header nav 
+*/
+.header_nav{
+    position: fixed !important;
+    z-index: 1;
+    width: 100%;
+}
+.cart_nav a{
+    color: rgb(187, 219, 70);
+    text-decoration: none;
+}
+.cart_nav a:hover{
+    color: orange;
+}
 .second-form input {
     border-radius: 4px;
     width: 100px;
@@ -140,7 +154,7 @@ margin-bottom: 10px;
     color: orange;
 }
 
-@media(max-width: 600px){
+@media(max-width: 700px){
     input[type=text]:focus{
         width: 95%;
     }
@@ -151,11 +165,14 @@ margin-bottom: 10px;
         display: none;
     }
 }
-@media (min-width: 600px){
+@media (min-width: 650px){
 .first-form input{
     display: none;
 }
 .credetials{
+    display: none;
+}
+.header_nav{
     display: none;
 }
 .header_nav{

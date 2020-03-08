@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" />
         <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/user.css" />
         <link rel="stylesheet" href="/css/footer.css" />
         <link rel="stylesheet" href="/css/categories.css" />
         <link rel="stylesheet" href="/css/index.css" />
@@ -66,7 +67,7 @@
             </div>
             
         </div>
-        <nav class="navbar navbar-inverse" id="header_nav">
+        <nav class="navbar navbar-inverse header_nav">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -80,7 +81,7 @@
                     <form action="products/all-products" class="first-form">
                         <input type="text" name="search" placeholder="Search..">
                       </form>
-
+                      
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
@@ -108,6 +109,16 @@
                         
                     </ul>
                 </div><!--/.nav-collapse -->
+            </div>
+            <div class="cart_nav">
+                <a href="/cart/checkout"><i class="fa fa-cart-plus" aria-hidden="true"></i>
+                    (
+                    <% if (typeof cart !== "undefined") { %>
+                    <%= cart.length %>
+                    <% } else {%>
+                    0
+                    <% } %>
+                )</a>
             </div>
         </nav>
         
