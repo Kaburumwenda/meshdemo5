@@ -10,8 +10,7 @@ var Product = require('../models/product');
 // Get Category model
 var Category = require('../models/category');
 
-//Get Trending
-var Trending = require('../models/trending');
+
 /*
  * GET all products
  */
@@ -30,21 +29,6 @@ router.get('/all-products', function(req, res) {
 });
 ///
 
-///Get all trending
-router.get('/all-trending', function(req, res) {
-    //router.get('/', isUser, function (req, res) {
-        
-     Product.find(function (err, products) {
-         if (err)
-             console.log(err); 
-         res.render('all_trending', {
-                title: 'All products',
-                products: products
-            });
-      });
-    
-    });
-    
 
 /*
  * GET products by category

@@ -112,15 +112,15 @@ router.post('/add-product', function (req, res) {
                 });
             } else {
 
-                var price2 = parseFloat(price).toFixed(2);
-                var price_off2 = parseFloat(price).toFixed(2);
+                //var price2 = parseFloat(price).toFixed(2);
+                //var price_off2 = parseFloat(price).toFixed(2);
 
                 var product = new Product({
                     title: title,
                     slug: slug,
                     desc: desc,
-                    price: price2,
-                    price_off:price_off2,
+                    price: price,
+                    price_off:price_off,
                     //seller:seller,
                     category: category,
                     discount:discount,
@@ -187,7 +187,8 @@ router.get('/edit-product/:id', isAdmin,  function (req, res) {
                         console.log(err);
                     } else {
                         galleryImages = files;
-
+                        //price: parseFloat(p.price).toFixed(2),
+                        //price_off:parseFloat(p.price_off).toFixed(2),
                         res.render('admin/edit_product', {
                             title: p.title,
                             errors: errors,
@@ -196,8 +197,8 @@ router.get('/edit-product/:id', isAdmin,  function (req, res) {
                             desc: p.desc,
                             categories: categories,
                             category: p.category.replace(/\s+/g, '-').toLowerCase(),
-                            price: parseFloat(p.price).toFixed(2),
-                            price_off:parseFloat(p.price_off).toFixed(2),
+                            price: p.price,
+                            price_off:p.price_off,
                             image: p.image,
                             galleryImages: galleryImages,
                             id: p._id
@@ -253,14 +254,15 @@ router.post('/edit-product/:id', function (req, res) {
                 Product.findById(id, function (err, p) {
                     if (err)
                         console.log(err);
-
+                        //p.price = parseFloat(price).toFixed(2);
+                        //p.price_off = parseFloat(price_off).toFixed(2);
                     p.title = title;
                     p.slug = slug;
                     p.desc = desc;
                     //p.seller =seller;
                     p.discount =discount;
-                    p.price = parseFloat(price).toFixed(2);
-                    p.price_off = parseFloat(price_off).toFixed(2);
+                    p.price = price;
+                    p.price_off =price_off;
                     p.category = category;
                     if (imageFile != "") {
                         p.image = imageFile;

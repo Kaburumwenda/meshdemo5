@@ -19,15 +19,15 @@ var ProductSchema = mongoose.Schema({
         required: true
     },
     price: {
-        type: Number,
+        type: String,
         required: true
     },
     price_off:{
-        type:Number,
+        type:String,
         required:true
     },
     discount: {
-        type: Number
+        type: String
         
     },
     seller:{

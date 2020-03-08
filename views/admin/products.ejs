@@ -24,9 +24,9 @@
         <% products.forEach(function(product){ %>
         <tr>
             <td><%= product.title %></td>
-            <td>Ksh <%= parseFloat(product.price).toFixed(2) %></td>
-            <td>Ksh <%= parseFloat(product.price_off).toFixed(2) %></td>
-            <td>Ksh <%= parseFloat(product.discount).toFixed(2) %></td>
+            <td>Ksh <%= product.price %></td>
+            <td>Ksh <%= product.price_off %></td>
+            <td>Ksh <%= product.discount %></td>
             <td><%= product.category %></td>
             <td>
                 <% if (product.image == "") { %>
