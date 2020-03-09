@@ -1,6 +1,11 @@
 <% include _layouts/header %>
-
+<br>
 <div class="register">
+
+    <div>
+        <img src="/assests/acc1.jpeg"/>
+    </div>
+
     <h1><%= title %></h1>
 
 <form method="post" action="/users/register">
@@ -22,14 +27,16 @@
 
     <div class="form-group">
         <label>Password</label>
-        <input type="password" name="password" class="form-control"  placeholder="Password">
+        <input id="password-field" type="password" class="form-control" name="password" placeholder="Secret Password">
+        <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
     </div>
     
     <div class="form-group">
         <label>Confirm Password</label>
-        <input type="password" name="password2" class="form-control"  placeholder="Confirm Password">
+        <input id="password-field" type="password" class="form-control" name="password2" placeholder="Confirm Password">
+        <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
     </div>
-
+    <br>
     <button type="submit" class="btn btn-default btn-success">Register</button>
 </form>
 <br>
@@ -39,4 +46,29 @@
 </div>
 </div>
 
+<script>
+    $(".toggle-password").click(function() {
+
+$(this).toggleClass("fa-eye fa-eye-slash");
+var input = $($(this).attr("toggle"));
+if (input.attr("type") == "password") {
+  input.attr("type", "text");
+} else {
+  input.attr("type", "password");
+}
+});
+</script>
+
 <% include _layouts/footer %>
+
+<!--
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" name="password" class="form-control"  placeholder="Password">
+    </div>
+    
+    <div class="form-group">
+        <label>Confirm Password</label>
+        <input type="password" name="password2" class="form-control"  placeholder="Confirm Password">
+    </div>
+-->

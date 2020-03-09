@@ -153,5 +153,5 @@ app.use('/adverts',Trendingadverts);
 mongoose.connect(config.database,
 { useNewUrlParser: true,  useUnifiedTopology: true  },
 ()=>console.log('mongodb connected successfully'))
-var port =process.env.PORT || 3000;
-app.listen(port,()=>console.log('server is up on port: 3000'));
+var port =process.env.PORT || 2000;
+app.listen(port,()=>console.log('server is up on port: 6000'));
